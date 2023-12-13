@@ -1,0 +1,42 @@
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Provide a fallback font */
+    background-color: #2c398b;
+    /* overflow: hidden; */
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Center elements horizontally */
+.main-container, .content, .baggage {
+    margin: 0 auto;
+}
+
+/* Style main container */
+.main-container {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+/* Style content */
+.content {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.5em;
+}
+
+/* Style baggage image */
+.baggage img {
+    margin-top: 20px;
+    border-radius: 20px;
+}
