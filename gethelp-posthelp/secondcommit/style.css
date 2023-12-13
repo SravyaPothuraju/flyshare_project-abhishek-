@@ -6,7 +6,8 @@
 }
 
 .hero{
-    width: 100%;
+    margin-left: 320px;
+    width: 80%;
     height: 100vh;
     background-image: linear-gradient(rgba(39, 240, 163, 0.3),rgba(3, 51, 45, 0.3));
     position: relative;
