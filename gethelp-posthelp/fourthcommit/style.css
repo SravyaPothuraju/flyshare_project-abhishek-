@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.body {
+  /* border: 3px solid black; */
+  font-family: 'Roboto', sans-serif;
+  /* background-image: url("main.png");
+  background-position: fixed; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* box-sizing: ; */
+}
+.container{
+    height: 100vh;
+/* border: 3px solid black; */
+  font-family: 'Roboto', sans-serif;
+  background-image: url("main.png");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #042331;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #063146;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 50px;
+}
+.sidebar ul a svg{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  background: #042331;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: white;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancel{
+  left: 195px;
+}
+.content {
+    font-size: 50px;
+    font-weight: bolder;
+    color: white;
+    margin-left: 850px;
+    /* display: flex;
+    flex-direction: row ; */
+}
+.content h1 {
+    margin-top: 20px;
+}
+/* .buttons{
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 740px;
+}
+.get {
+    text-decoration: none;
+    border: 2px solid white;
+    background-color: rgb(198, 217, 235);
+    padding: 14px 70px;
+    margin-top: 50px;
+    margin-left: 120px;
+    border-radius: 50px;
+    font-size: 24px;
+    color: black;
+}
+.post {
+    text-decoration: none;
+    border: 2px solid rgb(198, 217, 235);
+    background-color:rgb(9, 64, 116);
+    padding: 14px 70px;
+    margin-top: 20px;
+    border-radius: 50px;
+    font-size: 24px;
+    color: white;
+} */
+.buttons{
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: -40px;
+    margin-left: 85px;
+}
+.get {
+    text-decoration: none;
+    /* border: 2px solid white; */
+    background-color: #063146;
+    padding: 14px 70px;
+    margin-top: 20px;
+    border-radius: 50px;
+    font-size: 24px;
+    color: white;
+}
+.post {
+    text-decoration: none;
+    background-color: #063146;
+    /* background-color:rgb(9, 64, 116); */
+    padding: 14px 70px;
+    margin-top: 20px;
+    border-radius: 50px;
+    font-size: 24px;
+    color: white;
+}
+@media screen and (min-width: 1024px) {
+    .container {
+      width: 100%; /* Adjusting width for smaller screens */
+      height: 100vh; /* Allow the container's height to adjust automatically */
+      background-size: cover;   
+    }
+  
+    .sidebar {
+      left: -250px; /* Hide sidebar by default on smaller screens */
+      transition: all .5s ease;
+    }
+  
+    .content {
+      margin-left: 700px; /* Adjust content position for smaller screens */
+    }
+  
+    .buttons {
+      margin-left: 10px; /* Adjust button position for smaller screens */
+    }
+  
+    .sidebar header,
+    .sidebar ul a {
+      font-size: 16px; /* Reduce font size for sidebar items */
+    }
+  }
+@media screen and (max-width: 1024px) {
+    .container {
+      width: 100%; /* Adjusting width for smaller screens */
+      height: 100vh; /* Allow the container's height to adjust automatically */
+      background-size: cover;
+    }
+  
+    .sidebar {
+      left: -250px; /* Hide sidebar by default on smaller screens */
+      transition: all .5s ease;
+    }
+  
+    .content {
+      margin-left:600px; /* Adjust content position for smaller screens */
+    }
+  
+    .buttons {
+      margin-left: 10px; /* Adjust button position for smaller screens */
+    }
+  
+    .sidebar header,
+    .sidebar ul a {
+      font-size: 18px; /* Reduce font size for sidebar items */
+    }
+  }
+  @media screen and (max-width: 412px) {
+    .container {
+      width: 100%; /* Adjusting width for smaller screens */
+      height: auto; /* Allow the container's height to adjust automatically */
+      background-size: cover; /* background-position: fixed; */
+    }
+  
+    .sidebar {
+      left: -250px; /* Hide sidebar by default on smaller screens */
+      transition: all .5s ease;
+    }
+  
+    .content {
+      height: 100vh;
+      margin-top: 0px;
+      margin-left: 100px; /* Adjust content position for smaller screens */
+    }
+    .main h1{
+        font-size: 44px;
+    }
+    .buttons {
+      margin-left: 10px; /* Adjust button position for smaller screens */
+    }
+  
+    .sidebar header,
+    .sidebar ul a {
+      font-size: 16px; /* Reduce font size for sidebar items */
+    }
+  }
+/* #check:checked ~ section{
+  margin-left: 250px;
+}
+section{
+  background: url(bg.jpeg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: all .5s;
+} */

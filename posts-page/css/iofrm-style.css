@@ -9,9 +9,26 @@ body {
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   /* background-attachment: fixed; */
-  /* overflow: hidden; */
+  overflow: hidden;
 }
-
+.row {
+  /* border: 3px solid black; */
+}
+.img-holder{
+  /* border: 3px solid black; */
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.rating{
+  /* border: 3px solid black; */
+}
+.post-container{
+  /* width: 50%; */
+  /* border: 3px solid black; */
+}
 html,
 body {
   height: 100%;
@@ -21,7 +38,110 @@ body {
   background-color: #0093ff;
   height: 100%;
 }
+.post-container {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  margin-left:550px;
+  width: 60%;
+  height: 100vh;
+}
+.main-container {
+  /* border: 3px solid black; */
+  margin-top: 10px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: row;
+}
+.post-content img{
+  width: 50px;
+  /* padding-right: 25px; */
+  margin-right: 25px;
+}
+.post-content span{
+  padding-right: 30px;
+  font-size: xx-large;
 
+}
+/* Styles for the post */
+.post {
+  margin-top: 40px;
+  margin-left: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Adjust the width as needed */
+}
+.post-actions {
+  margin-top: 10px;
+}
+.post2 {
+  margin-top: 40px;
+  margin-left: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px; /* Adjust the width as needed */
+}
+.chat-section {
+  display: none; /* Initially hide the chat section */
+}
+.first{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.second{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.dept{
+  padding-left: 5px;
+  font-size: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin-top: 0px; */
+}
+.third{
+  margin-top: 10px;
+}
+.fourth{
+  display: flex;
+  flex-direction: row;
+}
+#chat{
+  margin-right: 50px;
+}
+.star {
+  float: left;
+  font-size: 5px;
+  color: black; 
+  /* Initial star color */
+  cursor: pointer;
+  margin-left: -25px;
+  /* margin-left: 5px; */
+  /* padding-right: -3px;
+  margin-right: -3px; */
+}
+
+.star.clicked {
+  color: #fd4; /* Color of filled star */
+}
+.rating{
+  /* border: solid 3px black; */
+ margin-right: -25px;
+ margin-left: -35px;
+  /* margin-right: 10px; */
+
+}
+.submit-button{
+  margin-top: 15px;
+  margin-left: 350px;
+}
 .form-body > .row {
   position: relative;
   margin-left: 0;
@@ -513,18 +633,6 @@ body {
   background-color: #ebeff8;
   color: #8d8d8d;
 }
-.error-message-flight {
-  font-size: 12px; /* Adjust the font size as needed */
-  color: red;
-  /* margin-bottom: 10px; Optional: Add some spacing between the input and error message */
-}
-.error-message-pnr {
-  font-size: 12px; /* Adjust the font size as needed */
-  color: red;
-  /* margin-bottom: 10px; Optional: Add some spacing between the input and error message */
-}
-
-
 
 .form-content textarea {
   position: static !important;

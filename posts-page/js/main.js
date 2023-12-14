@@ -1,3 +1,22 @@
+// document.addEventListener("DOMContentLoaded", function() {
+//   // Chat button functionality
+//   const chatButton = document.getElementById("chatButton");
+//   const chatSection = document.getElementById("chatSection");
+
+//   chatButton.addEventListener("click", function() {
+//     // Show or hide the chat section when the chat button is clicked
+//     chatSection.style.display = chatSection.style.display === "none" ? "block" : "none";
+//   });
+
+//   // Verify button functionality (this is a placeholder)
+//   const verifyButton = document.getElementById("verifyButton");
+//   const pnrNumberElement = document.getElementById("pnrNumber");
+
+//   verifyButton.addEventListener("click", function() {
+//     // Simulating verification by changing the PNR number
+//     pnrNumberElement.textContent = "VerifiedPNR123"; // Change this logic with actual verification process
+//   });
+// });
 "use strict";
 
 $(document).ready(function () {
@@ -73,69 +92,20 @@ $(document).ready(function () {
       document.body.appendChild(datalist);
       cityInput.setAttribute("list", dataListId);
     }
+  }})
+  function rate(stars) {
+    const starElements = document.querySelectorAll('.star');
+  
+    starElements.forEach((star, index) => {
+      if (index === stars - 1 && star.classList.contains('clicked')) {
+        star.classList.remove('clicked'); // Remove the yellow background when clicked twice
+      } else if (index < stars) {
+        star.classList.add('clicked');
+      } else {
+        star.classList.remove('clicked');
+      }
+    });
   }
-  $("form").on("submit", function (e) {
-    e.preventDefault();
-
-    var isFlightValid = false;
-    var isPNRValid = false;
-
-    // Validation for Flight Number
-    var flightNumber = $("input[placeholder='Flight number']").val().trim();
-    var alphanumericRegexFlight = /^[a-zA-Z0-9]{0,6}$/; // Alphanumeric, max 6 characters
-    if (!alphanumericRegexFlight.test(flightNumber)) {
-      $(".error-message-flight").remove();
-      $("input[placeholder='Flight number']").after('<span class="error-message-flight">maximum 6 characters.</span>');
-    } else {
-      $(".error-message-flight").remove();
-      isFlightValid = true;
-    }
-
-    // Validation for PNR Number
-    var pnrNumber = $("input[placeholder='PNR number']").val().trim();
-    var alphanumericRegexPNR = /^[a-zA-Z0-9]{6}$/; // Exactly 6 alphanumeric characters
-    if (!alphanumericRegexPNR.test(pnrNumber)) {
-      $(".error-message-pnr").remove();
-      $("input[placeholder='PNR number']").after('<span class="error-message-pnr">exactly 6 characters.</span>');
-    } else {
-      $(".error-message-pnr").remove();
-      isPNRValid = true;
-    }
-
-    // Check if both validations passed before proceeding
-    if (isFlightValid && isPNRValid) {
-      // Proceed with form submission or other actions
-      alert("Form submitted successfully!");
-      // this.submit(); // Uncomment this line to proceed with actual form submission
-    }
-  });
-  // Your existing functionality
-  $(".btn-forget").on("click", function (e) {
-    e.preventDefault();
-    var inputField = $(this).closest("form").find("input");
-    if (inputField.attr("required") && inputField.val()) {
-      $(".error-message").remove();
-      $(".form-items", ".form-content").addClass("hide-it");
-      $(".form-sent", ".form-content").addClass("show-it");
-    } else {
-      $(".error-message").remove();
-      $(
-        '<small class="error-message">Please fill the field.</small>'
-      ).insertAfter(inputField);
-    }
-  });
-
-  $(".btn-tab-next").on("click", function (e) {
-    e.preventDefault();
-    $(".nav-tabs .nav-item > .active")
-      .parent()
-      .next("li")
-      .find("a")
-      .trigger("click");
-  });
-
-  $('.custom-file input[type="file"]').on("change", function () {
-    var filename = $(this).val().split("\\").pop();
-    $(this).next().text(filename);
-  });
-});
+  
+  
+  
